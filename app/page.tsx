@@ -30,8 +30,15 @@ export default function Home() {
           }}
         ></input>
 
-        {results.map((result) => (
-          <div key={result}>{result}</div>
+        {results.map((result, index) => (
+          <div
+            key={result}
+            onClick={(e) => {
+              console.log(results[index]);
+            }}
+          >
+            {result}
+          </div>
         ))}
 
         <div className="flex gap-4 items-center flex-col sm:flex-row"></div>
